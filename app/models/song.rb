@@ -17,7 +17,7 @@ class Song < ActiveRecord::Base
     else
       true
     end
-    
+
   end
 
 end
