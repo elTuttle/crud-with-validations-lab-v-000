@@ -14,10 +14,11 @@
 <% end %>
 
 <%= form_for @song do |f| %>
-  <%= f.text_field :title %>
-  <%= f.text_field :artist_name %>
-  <%= f.text_field :genre %>
-  <%= f.text_field :released %>
-  <%= f.text_field :release_year %>
+  <p>Title:</p> 
+  <%= f.text_field :title %><br>
+  <%= f.text_field :artist_name %><br>
+  <%= f.text_field :genre %><br>
+  <%= f.text_field :released %><br>
+  <%= f.text_field :release_year %><br>
   <%= f.submit %>
 <% end %>
