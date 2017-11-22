@@ -2,6 +2,7 @@ class Song < ActiveRecord::Base
   validates :title, presence: true
   validates :title, uniqueness: true
   validates :released, inclusion: { in: %w(true false)}
+  validate :release_year_validation
 
   def release_year_validation
     if self.released
