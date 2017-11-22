@@ -1,7 +1,9 @@
 <%= @songs.each do |song| %>
-  <h1><%= song.title %></h1>
-  <h3><%= song.artist_name %></h3>
-  <h3><%= song.genre %></h3>
-  <p><%= song.released %></p>
-  <p><%= song.release_year %></p>
+  <%= link_to(song) do %>
+    <h1><%= song.title %></h1>
+    <h3><%= song.artist_name %></h3>
+    <h3><%= song.genre %></h3>
+    <p><%= song.released %></p>
+    <p><%= song.release_year %></p>
+  <%end%>
 <%end%>
