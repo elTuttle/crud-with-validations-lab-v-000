@@ -11,7 +11,7 @@ class Song < ActiveRecord::Base
       end
 
       if self.released_year > DateTime.now.year
-        errors.add(:release_year_validation, "Release year cannot be in the future if album is already released")
+        errors.add(:release_year_validation, "Release year cannot be in the future if album is already released.")
       end
 
     end
