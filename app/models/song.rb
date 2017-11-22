@@ -10,10 +10,10 @@ class Song < ActiveRecord::Base
       #binding.pry
       if self.release_year == nil
         errors.add(:release_year_validation, "If album is released, must have release year.")
-      end
-
-      if self.release_year > current_year
-        errors.add(:release_year_validation, "Release year cannot be in the future if album is already released.")
+      else
+        if self.release_year > current_year
+          errors.add(:release_year_validation, "Release year cannot be in the future if album is already released.")
+        end
       end
     end
   end
