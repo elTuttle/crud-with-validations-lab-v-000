@@ -6,6 +6,7 @@ class Song < ActiveRecord::Base
   validates :artist_name, presence: true
 
   def release_year_validation
+    binding.pry
     current_year = DateTime.now.year.to_i
     if self.released
       if self.release_year == nil
