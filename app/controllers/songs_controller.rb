@@ -7,6 +7,10 @@ class SongsController < ApplicationController
     @song = Song.find(params[:id])
   end
 
+  def new
+    
+  end
+
   def create
 
   end
