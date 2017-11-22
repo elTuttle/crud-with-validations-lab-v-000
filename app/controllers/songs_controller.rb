@@ -40,7 +40,7 @@ class SongsController < ApplicationController
   end
 
   def set_song!
-    @post = Post.find(params[:id])
+    @song = Song.find(params[:id])
   end
 
 end
