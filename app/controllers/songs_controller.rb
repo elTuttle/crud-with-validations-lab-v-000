@@ -12,7 +12,7 @@ class SongsController < ApplicationController
   end
 
   def create
-    @song = Song.new(post_params)
+    @song = Song.new(song_params)
 
     if @song.save
       redirect song_path(@song)
@@ -32,4 +32,15 @@ class SongsController < ApplicationController
   def destroy
 
   end
+
+  private
+
+  def song_params
+    params.permit(:title, :category, :content)
+  end
+
+  def set_post!
+    @post = Post.find(params[:id])
+  end
+  
 end
