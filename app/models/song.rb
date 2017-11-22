@@ -5,15 +5,15 @@ class Song < ActiveRecord::Base
 
   def release_year_validation
     if self.released
-      
+
       if self.released_year == nil
         errors.add(:release_year_validation, "If album is released, must have release year.")
       end
 
-      if condition
-        
+      if self.released_year > DateTime.now.year
+
       end
-      
+
     end
   end
 
