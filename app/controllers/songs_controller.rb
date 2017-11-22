@@ -39,8 +39,8 @@ class SongsController < ApplicationController
     params.permit(:title, :category, :content)
   end
 
-  def set_post!
+  def set_song!
     @post = Post.find(params[:id])
   end
-  
+
 end
