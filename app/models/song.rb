@@ -2,8 +2,8 @@ class Song < ActiveRecord::Base
   validates :title, presence: true
   validates :title, uniqueness: true
   validates :released, inclusion: { in: %w(true false)}
-  validate :release_year_validation
   validates :artist_name, presence: true
+  validate :release_year_validation
 
   def release_year_validation
     current_year = DateTime.now.year.to_i
