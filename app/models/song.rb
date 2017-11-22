@@ -8,7 +8,7 @@ class Song < ActiveRecord::Base
   def release_year_validation
     current_year = DateTime.now.year.to_i
     if self.released
-      binding.pry
+      #binding.pry
       if self.release_year == nil
         errors.add(:release_year_validation, "If album is released, must have release year.")
       end
