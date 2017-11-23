@@ -34,7 +34,7 @@ class SongsController < ApplicationController
     @song.released = params[:song][:released]
     @song.genre = params[:song][:genre]
     @song.release_year = params[:song][:release_year].to_i
-    if temp_post.valid?
+    if @post.valid?
       @post.update(post_params)
       redirect_to post_path(@post)
     else
