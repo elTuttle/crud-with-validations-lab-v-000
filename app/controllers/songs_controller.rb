@@ -28,6 +28,7 @@ class SongsController < ApplicationController
   end
 
   def update
+    @song = set_song!
     @song.update(title: params[:song][:title], artist_name: params[:song][:artist_name], released: params[:song][:released], genre: params[:song][:genre])
     @song.release_year = params[:song][:release_year].to_i
     if temp_post.valid?
