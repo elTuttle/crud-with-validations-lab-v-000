@@ -12,7 +12,7 @@ class SongsController < ApplicationController
   end
 
   def create
-    @song = Song.new(title: params[:song][:title], artist_name: params[:song][:title], released: params[:song][:released], release_year: [:song][:release_year], genre: params[:song][:genre])
+    @song = Song.new(title: params[:song][:title], artist_name: params[:song][:artist_name], released: params[:song][:released], release_year: [:song][:release_year], genre: params[:song][:genre])
     binding.pry
     if @song.save
       redirect song_path(@song)
