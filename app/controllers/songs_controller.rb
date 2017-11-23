@@ -15,7 +15,7 @@ class SongsController < ApplicationController
     @song = Song.new(title: params[:song][:title], artist_name: params[:song][:artist_name], released: params[:song][:released], genre: params[:song][:genre])
     @song.release_year = params[:song][:release_year].to_i
     binding.pry
-    if @song.save
+    if @song.valid?
       redirect song_path(@song)
     else
       render :new
