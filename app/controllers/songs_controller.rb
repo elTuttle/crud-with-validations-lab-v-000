@@ -16,7 +16,7 @@ class SongsController < ApplicationController
     @song.release_year = params[:song][:release_year].to_i
     #binding.pry
     if @song.valid?
-      binding.pry
+      #binding.pry
       @song.save
       redirect song_path(@song)
     else
