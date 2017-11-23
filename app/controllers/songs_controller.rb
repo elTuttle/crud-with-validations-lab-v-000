@@ -25,6 +25,7 @@ class SongsController < ApplicationController
   end
 
   def edit
+    @song = set_song!
   end
 
   def update
