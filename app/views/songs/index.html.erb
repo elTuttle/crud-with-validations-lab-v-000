@@ -6,5 +6,5 @@
     <p><%= song.released %></p>
     <p><%= song.release_year %></p>
   <%end%>
-  <%= link_to "Edit #{song.title}", edit_post_path(post) %>
+  <%= link_to song.title, edit_post_path(post) %>
 <%end%>
