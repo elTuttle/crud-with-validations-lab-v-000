@@ -17,7 +17,7 @@ class SongsController < ApplicationController
     #binding.pry
     if @song.valid?
       binding.pry
-      @song
+      @song.save
       redirect song_path(@song)
     else
       render :new
