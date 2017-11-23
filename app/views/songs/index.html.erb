@@ -5,7 +5,7 @@
     <h3><%= song.genre %></h3>
     <p><%= song.released %></p>
     <p><%= song.release_year %></p>
-    <%= form_tag song_path(song), method: :edit%>
+    <%= form_tag song_path(song), method: "patch"%>
       <%= submit_tag "Edit #{song.name}" %>
     <%end%>
   <%end%>
