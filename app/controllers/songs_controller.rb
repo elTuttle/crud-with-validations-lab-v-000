@@ -35,7 +35,7 @@ class SongsController < ApplicationController
     @song.genre = params[:song][:genre]
     @song.release_year = params[:song][:release_year].to_i
     if @post.valid?
-      @post.update(post_params)
+      @post.save
       redirect_to post_path(@post)
     else
       render :edit
