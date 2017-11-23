@@ -5,8 +5,6 @@
     <h3><%= song.genre %></h3>
     <p><%= song.released %></p>
     <p><%= song.release_year %></p>
-    <%= form_for song do |f| %>
-      <%= f.submit%>
-    <% end %>
+    <%= link_to "Edit", song, method: :edit%>
   <%end%>
 <%end%>
