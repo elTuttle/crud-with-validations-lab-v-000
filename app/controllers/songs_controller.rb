@@ -28,7 +28,14 @@ class SongsController < ApplicationController
   end
 
   def update
-
+    @song.update(title: params[:song][:title], artist_name: params[:song][:artist_name], released: params[:song][:released], genre: params[:song][:genre])
+    @song.release_year = params[:song][:release_year].to_i
+    if temp_post.valid?
+      @post.update(post_params)
+      redirect_to post_path(@post)
+    else
+      render :edit
+    end
   end
 
   def destroy
